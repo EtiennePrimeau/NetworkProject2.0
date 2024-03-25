@@ -96,11 +96,11 @@ public class NetworkMatchManager : NetworkBehaviour
 
     public void LaunchGame()
     {
-        Debug.Log("Launching cinematic");
+        //Debug.Log("Launching cinematic");
         foreach (var player in ConnectedPlayers)
         {
             var cinematic = player.gameObject.GetComponentInChildren<LaunchCinematic>(); // previously player.identity.gameObject
-            Debug.Log(player.GetDisplayName() + " is launching cinematic " + cinematic);
+            //Debug.Log(player.GetDisplayName() + " is launching cinematic " + cinematic);
             if (cinematic != null)
             {
                 cinematic.RPC_Launch();
@@ -117,7 +117,7 @@ public class NetworkMatchManager : NetworkBehaviour
 
     public void SetConnectedPlayersList(List<NetworkGamePlayer> list)
     {
-        Debug.Log("setting list: " + list.Count);
+        //Debug.Log("setting list: " + list.Count);
         ConnectedPlayers = list;
     }
 

@@ -8,7 +8,7 @@ public class NetworkRoomPlayer : NetworkBehaviour
     [Header("UI")]
     [SerializeField] private GameObject m_lobbyUI = null; // on only if belongs to localPlayer
     [SerializeField] private TMP_Text[] m_playerNameTexts = new TMP_Text[4];
-    [SerializeField] private TMP_Text[] m_playerTeamSelectionTexts = new TMP_Text[4];
+    //[SerializeField] private TMP_Text[] m_playerTeamSelectionTexts = new TMP_Text[4];
     [SerializeField] private TMP_Text[] m_playerReadyTexts = new TMP_Text[4];
     [SerializeField] private Button m_startGameButton = null; // on only if Host
     //[SerializeField] private Button m_changeTeamButton = null; // interactable only if not ready

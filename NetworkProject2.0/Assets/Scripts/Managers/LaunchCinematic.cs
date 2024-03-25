@@ -30,7 +30,7 @@ public class LaunchCinematic : NetworkBehaviour
         {
             return;
         }
-        Debug.Log("rpc_launch");
+        //Debug.Log("rpc_launch");
 
         m_timer = 0.0f;
         m_hasStarted = true;
@@ -84,7 +84,7 @@ public class LaunchCinematic : NetworkBehaviour
 
     private void EndPlayerCinematic()
     {
-        Debug.Log("EndPlayerCinematic");
+        //Debug.Log("EndPlayerCinematic");
         var runnerSM = m_player.GetComponentInChildren<RunnerSM>();
         if (runnerSM != null)
         {

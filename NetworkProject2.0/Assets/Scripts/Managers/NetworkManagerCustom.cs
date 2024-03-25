@@ -215,15 +215,21 @@ public class NetworkManagerCustom : NetworkManager
         {
             if (!AllPlayersAreReady()) { return; }
 
-            var map = Instantiate(m_mapPrefab);
-            NetworkServer.Spawn(map);
-
-            SwitchRoomPlayersToGamePlayers();
-
-            MatchManager.SetConnectedPlayersList(GamePlayers);
-            MatchManager.LaunchGame();
+            LaunchGame();
         }
 
+    }
+
+    private void LaunchGame()
+    {
+        Debug.Log("Spawned at " + DateTime.Now.TimeOfDay);
+        var map = Instantiate(m_mapPrefab);
+        NetworkServer.Spawn(map);
+
+        SwitchRoomPlayersToGamePlayers();
+
+        MatchManager.SetConnectedPlayersList(GamePlayers);
+        MatchManager.LaunchGame();
     }
 
     private bool AllPlayersAreReady()
@@ -267,20 +273,20 @@ public class NetworkManagerCustom : NetworkManager
         }
     }
 
-    //GameObject SpawnLevel(SpawnMessage msg)
-    //{
-    //    Debug.Log("Spawned at " + DateTime.Now.TimeOfDay);
-    //    
-    //    var level = Instantiate(m_mapPrefab, Spawner.transform);
-    //    Identifier.AssignAllIds(Spawner.transform);
-    //
-    //    return level;
-    //}
-    //
-    //public void UnSpawnLevel(GameObject spawned)
-    //{
-    //    Destroy(spawned);
-    //}
+    GameObject SpawnLevel(SpawnMessage msg)
+    {
+        Debug.Log("Spawned at " + DateTime.Now.TimeOfDay);
+        
+        var level = Instantiate(m_mapPrefab/*, Spawner.transform*/);
+        //Identifier.AssignAllIds(Spawner.transform);
+    
+        return level;
+    }
+    
+    public void UnSpawnLevel(GameObject spawned)
+    {
+        Destroy(spawned);
+    }
     
     public override void RegisterClientMessages()
     {
@@ -288,11 +294,11 @@ public class NetworkManagerCustom : NetworkManager
 
         if (m_runnerPrefab != null)
             NetworkClient.RegisterPrefab(m_runnerPrefab);
-        if (m_mapPrefab != null)
-            NetworkClient.RegisterPrefab(m_mapPrefab);
         //if (m_mapPrefab != null)
-        //{
-        //    NetworkClient.RegisterPrefab(m_mapPrefab, SpawnLevel, UnSpawnLevel);
-        //}
+        //    NetworkClient.RegisterPrefab(m_mapPrefab);
+        if (m_mapPrefab != null)
+        {
+            NetworkClient.RegisterPrefab(m_mapPrefab, SpawnLevel, UnSpawnLevel);
+        }
     }
 }
