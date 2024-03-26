@@ -982,11 +982,8 @@ MonoBehaviour:
   syncInterval: 0
   m_cinematicGo: {fileID: 4699918625296110364}
   m_localPlayerPrefab: {fileID: 2096930612547086335, guid: 76be8e50320d7cd42ac75726243dd83c, type: 3}
-  isRunner: 1
   m_animator: {fileID: 4342733284951135377}
   m_rb: {fileID: 3109528093335577887}
-  m_controller: {fileID: 0}
-  m_shooter: {fileID: 0}
 --- !u!114 &6097276605400135683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1880,7 +1877,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8135032306719742848
 Transform:
   m_ObjectHideFlags: 0
@@ -1904,7 +1901,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4699918625296110364}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -1955,7 +1952,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4699918625296110364}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8285cd44134ce6740acf07367e0adda4, type: 3}
   m_Name: 
@@ -1965,7 +1962,6 @@ MonoBehaviour:
   syncInterval: 0
   m_camera: {fileID: 5697608858361065265}
   m_player: {fileID: 2096930612547086335}
-  m_playerType: 0
   m_objectToLookAt: {fileID: 7109407818930284702}
   m_horizontalCurve:
     serializedVersion: 2
@@ -2038,6 +2034,7 @@ MonoBehaviour:
   m_rotationSpeed: 5
   m_duration: 5
   m_timer: 0
+  m_skipCinematic: 1
 --- !u!1 &4800765497083708400
 GameObject:
   m_ObjectHideFlags: 0

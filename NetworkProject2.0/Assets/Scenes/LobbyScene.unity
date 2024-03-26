@@ -1559,6 +1559,7 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
+  m_skipCinematic: 1
   m_radius: 10
   m_respawnHeight: 10
   m_maxGameTimer: 300
@@ -1648,9 +1649,9 @@ MonoBehaviour:
   <MatchManager>k__BackingField: {fileID: 818560574}
   m_roomPlayerPrefab: {fileID: 6205867618914317247, guid: 32ad89e75d824ab488a440acd88b0600, type: 3}
   m_lobbyScene: Assets/Scenes/LobbyScene.unity
-  m_minPlayers: 2
+  m_minPlayers: 1
   m_runnerPrefab: {fileID: 2096930612547086335, guid: d8bdaf1d71e46264bb75aa5e764b28ff, type: 3}
-  m_mapPrefab: {fileID: 1267137300523568382, guid: 0725ec95ff8b7c34c8cb342506ed17bb, type: 3}
+  m_mapPrefab: {fileID: 9060875102613275040, guid: 14653c62c9964fb4fb4e7d38f67e2d49, type: 3}
 --- !u!114 &862775109
 MonoBehaviour:
   m_ObjectHideFlags: 0

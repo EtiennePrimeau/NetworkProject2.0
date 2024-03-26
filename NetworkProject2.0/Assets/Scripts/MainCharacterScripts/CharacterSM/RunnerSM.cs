@@ -34,7 +34,7 @@ public class RunnerSM : CC_BaseStateMachine<CharacterState>
     public Vector3 RightVectorForPlayer { get; private set; }
     public bool IsStunned { get; private set; } = false;
 
-    public bool IsInNonGameplay { get; private set; } = true;
+    public bool IsInNonGameplay { get; private set; } = false;
 
     // /////////////////
 
